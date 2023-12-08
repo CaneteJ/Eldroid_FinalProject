@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="STUDY PLANNER"
+        app:layout_constraintTop_toBottomOf="@id/buttonAddSession"
+        tools:layout_editor_absoluteX="139dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/b"
+        android:layout_marginBottom="106dp" />
+
+    <Button
+        android:id="@+id/buttonAddSession"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Add Session"
+        app:layout_constraintBottom_toTopOf="@id/buttonEditSession"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_background"
+        />
+
+    <Button
+        android:id="@+id/buttonEditSession"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Edit Session"
+        app:layout_constraintBottom_toTopOf="@id/buttonProgressTracker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_background"
+        />
+
+    <Button
+        android:id="@+id/buttonProgressTracker"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Progress Tracker"
+        app:layout_constraintBottom_toTopOf="@id/buttonSetStudyGoals"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_background"
+        />
+
+    <Button
+        android:id="@+id/buttonSetStudyGoals"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Set Study Goals"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_background"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
