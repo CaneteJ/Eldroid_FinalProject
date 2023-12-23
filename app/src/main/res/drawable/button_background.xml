@@ -3,7 +3,7 @@
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="4dp" />
-            <solid android:color="#80FFEB3B" /> <!-- 80 is the alpha value for transparency -->
+            <solid android:color="#80FFFF00" /> <!-- 80 is the alpha value for transparency -->
         </shape>
     </item>
 </selector>

@@ -6,4 +6,165 @@
     android:layout_height="match_parent"
     tools:context=".EditSessionActivity">
 
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/background"
+        android:alpha="0.8"
+        android:layout_marginBottom="-20dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:alpha=".9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="#FFEB3B"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDelete"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:padding="20dp"
+            tools:ignore="ExtraText,TextSizeCheck">
+
+            <!-- Title TextView -->
+            <TextView
+                android:id="@+id/CurrentSessionTittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CURRENT SESSION"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,TextContrastCheck" />
+
+            <!-- Title EditText -->
+            <TextView
+                android:id="@+id/editTextTitle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/transparent_yellow"
+                android:hint="Title"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/CurrentSessionTittle"
+                tools:ignore="Autofill,HardcodedText,TextFields,TextContrastCheck" />
+
+            <TextView
+
+                android:id="@+id/editTextSubject"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:autofillHints="Subject"
+                android:background="@color/transparent_yellow"
+                android:hint="Subject"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextTitle"
+                tools:ignore="HardcodedText,TextFields,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:autofillHints=""
+                android:background="@color/transparent_yellow"
+                android:focusable="false"
+                android:hint="Date"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextSubject"
+                tools:ignore="HardcodedText,TextFields,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/editTextTime"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/transparent_yellow"
+                android:focusable="false"
+                android:hint="Set Time"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextDate"
+                tools:ignore="Autofill,HardcodedText,TextFields,TextContrastCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0.9"
+        android:backgroundTint="@color/transparent_yellow"
+        android:text="DELETE"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+    <Button
+        android:id="@+id/buttonEditCancel"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.9"
+        android:backgroundTint="@color/transparent_yellow"
+        android:text="Edit Cancel"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonDelete"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:text="Cancel"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:alpha="0.8"
+        android:backgroundTint="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/buttonEditCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha=".8"
+        android:background="@color/transparent_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navigation_menu"
+        tools:ignore="VisualLintBottomNav" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
